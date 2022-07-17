@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Eventos 2022</title>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="images/icon.jpg">
+</head>
+
+<body>
+    <!--Header com títulos -->
+    <header>
+        <div class="title">
+            <img src="images/logo.png" width="40em" alt="logo de eventos" />
+            <h1>Eventos</h1>
+        </div>
+        <!--Link dos menus-->
+        <nav class="nav">
+            <ul>
+                <li> <a href="#eventos"></a>Programação</li>
+                <li> <a href="#sobre"></a>Sobre</li>
+                <li> <a href="#contato"></a>Contato</li>
+            </ul>
+        </nav>
+    </header>
+    <!--   Main com o conteúdo principal-->
+    <main>
+        <!--Section contento o evento em destaque-->
+        <section>
+            <h2 class="title-section">Evento principal</h2>
+            <div class="card">
+                <div class="card-img">
+                    <img src="images/gusttavolima.png" alt="Gusttavo Lima" width="100%">
+                </div>
+
+                <div class="card-info">
+                    <div class="card-info-main">
+                        <div class="container-date">
+                            <p class="date">
+                                <strong>09/JUL</strong> 20:00
+                            </p>
+                            <h2>Buteco do Gusttavo Lima</h2>
+                            <span>Palco Principal</span>
+                        </div>
+                        <div class="card-info-footer">
+                            <button>Mais detalhes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Demais eventos-->
+        <section id="eventos" class="events">
+            <h2 class="title-section">Programação</h2>
+            <ul class="list-events">
+                <!--Jorge & Mateus-->
+                <li class="card">
+                    <div class="card-img-events">
+                        <img src="images/jorge&mateus.jpg" alt="Jorge % Mateus">
+                    </div>
+                    <div class="card-info-section">
+                        <div class="card-info-main">
+                            <div class="container-date">
+                                <p class="date"><strong>18/JUL</strong> 20:00
+                                </p>
+                                <h2>Jorge e Mateus</h2>
+                                <p>Palco Principal</p>
+                            </div>
+                </li>
+                <!--Grupo Tradição-->
+                <li class="card">
+                    <div class="card-img-events">
+                        <img src="images/tche-garotos.jpg" alt="Tche Garotos">
+                    </div>
+                    <div class="card-info-section">
+                        <div class="card-info-main">
+                            <div class="container-date">
+                                <p class="date"><strong>18/JUL</strong> 19:00
+                                </p>
+                                <h2>Tchê Garotos</h2>
+                                <p>Palco Raíz</p>
+                            </div>
+                </li>
+                <!--Alok-->
+                <li class="card">
+                    <div class="card-img-events">
+                        <img src="images/alok.jpg" alt="Alok">
+                    </div>
+                    <div class="card-info-section">
+                        <div class="card-info-main">
+                            <div class="container-date">
+                                <p class="date"><strong>19/JUL</strong> 20:00
+                                </p>
+                                <h2>Alok</h2>
+                                <p>Palco Principal</p>
+                            </div>
+                </li>
+            </ul>
+        </section>
+        <!-- Section contento formulário de contato -->
+        <section id="contato">
+            <h2 class="title-section">Contato</h2>
+            <!-- Action definida como uma função JavaScript -->
+            <form class="form-contact" action="javascript:submitFormContact()">
+                <div class="form-group">
+                    <input class="input-form" id="nome" placeholder="Nome" />
+                    <input class="input-form" id="email" placeholder="E-mail" />
+                </div>
+
+                <textarea class="textarea-form" id="descricao" name="story" placeholder="Descrição" rows="5"></textarea>
+
+                <div class="form-button">
+                    <button class="button-send">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <!--Footer contendo as informações da página-->
+
+    <footer>
+        <div class="contatos">
+            <img src="images/whatsapp.jpg" alt="whatsapp">
+        </div>
+        <div class="contatos">
+            <img src="images/linkedin.jpg" alt="linkedin">
+        </div>
+        <div class="contatos">
+            <img src="images/twitter.jpg" alt="twitter">
+        </div>
+        <p class="copyright">FESTA DO PINHÃO 2022. TODOS OS DIREITOS RESERVADOS.</p>
+    </footer>
+</body>
+<script src="./index.js"></script>
+
+</html>
