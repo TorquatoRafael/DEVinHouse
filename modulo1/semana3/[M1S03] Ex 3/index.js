@@ -21,3 +21,4 @@ case '/':
     alert(numero1 / numero2)
     break
 }
+console.log(operacao);
