@@ -13,7 +13,9 @@ var objeto4 = {
 var objeto5 = {
     nome: 'Danielly', sobrenome: 'Luz', idade: '15', setor: 'arquibancada'
 }
-var objeto5 = {
+var objeto6 = {
     nome: 'Edinara', sobrenome: 'Dias', idade: '67', setor: 'arquibancada'
 }
 
+var listaDeConvidados = [objeto1, objeto2, objeto3, objeto4, objeto5, objeto6]
+console.log(lista)
