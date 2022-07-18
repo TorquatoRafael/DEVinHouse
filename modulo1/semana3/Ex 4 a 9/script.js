@@ -1,3 +1,4 @@
+// Criação dos objetos
 var convidado1 = {
   nome: "John",
   sobrenome: "Stuart",
@@ -8,13 +9,13 @@ var convidado2 = {
   nome: "Julia",
   sobrenome: "Perdona",
   idade: 20,
-  setor: "camarote",
+  setor: "pista",
 };
 var convidado3 = {
   nome: "Rafael",
   sobrenome: "Elias",
   idade: 57,
-  setor: "pista",
+  setor: "arquibancada",
 };
 var convidado4 = {
   nome: "João Eduardo",
@@ -32,9 +33,9 @@ var convidado6 = {
   nome: "Edinara",
   sobrenome: "Dias",
   idade: 67,
-  setor: "arquibancada",
+  setor: "camarote",
 };
-
+// Criação Array
 var listaDeConvidados = [
   convidado1,
   convidado2,
@@ -44,6 +45,7 @@ var listaDeConvidados = [
   convidado6,
 ];
 
+//Função para verificar a idade
 function liberarBebidas(lista) {
   var resultado = lista.map((convidado) => {
     if (convidado.idade >= 18) {
@@ -55,5 +57,29 @@ function liberarBebidas(lista) {
   });
   return resultado;
 }
-var convidadosBebidasLiberadas = liberarBebidas(listaDeConvidados);
+var convidadosComBebidasProcessada = liberarBebidas(listaDeConvidados);
 console.log(listaDeConvidados);
+
+function separarCamarote(lista) {
+  var resultado = lista.filter((convidado) => convidado.setor === "camarote");
+  return resultado;
+}
+function separarPista(lista) {
+  var resultado = lista.filter((convidado) => convidado.setor === "pista");
+  return resultado;
+}
+function separarArquibancada(lista) {
+  var resultado = lista.filter(
+    (convidado) => convidado.setor === "arquibancada"
+  );
+  return resultado;
+}
+
+var listaCamarote = separarCamarote(listaDeConvidados);
+console.log(listaCamarote);
+
+var listaPista = separarPista(listaDeConvidados);
+console.log(listaPista);
+
+var listaArquibancada = separarArquibancada(listaDeConvidados)
+console.log(listaArquibancada);
