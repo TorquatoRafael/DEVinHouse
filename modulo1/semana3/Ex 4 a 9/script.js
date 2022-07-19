@@ -93,7 +93,7 @@ var montaNome = (objPessoa) => {
 };
 
 var marcarOpenBar = (convidado) => {
-  return convidado.openBar ? "🍺" : "🧉";
+  return convidado.openBar ? "🍺" : "🧋";
 };
 
 listaArquibancada.forEach((convidado) => {
