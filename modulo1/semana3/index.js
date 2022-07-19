@@ -17,6 +17,6 @@ var listaConvidados = [
 ];
 
 const listaResultante = listaConvidados.map((listaConvidados, indice) => {
-return listaConvidados.nome + " " + listaConvidados.sobrenome;
+  return listaConvidados.nome + " " + listaConvidados.sobrenome;
 });
 console.log(listaResultante);

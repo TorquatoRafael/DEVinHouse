@@ -48,10 +48,10 @@ var listaDeConvidados = [
 //Função para verificar a idade
 function liberarBebidas(lista) {
   var resultado = lista.map((convidado) => {
-    if (convidado.idade >= 18) {
-      convidado.openBar = "Sim";
+    {
+      convidado.openBar = false;
     }
-    convidado.openBar = "Não";
+    if (convidado.idade >= 18) convidado.openBar = true;
 
     return convidado;
   });
@@ -81,5 +81,29 @@ console.log(listaCamarote);
 var listaPista = separarPista(listaDeConvidados);
 console.log(listaPista);
 
-var listaArquibancada = separarArquibancada(listaDeConvidados)
+var listaArquibancada = separarArquibancada(listaDeConvidados);
 console.log(listaArquibancada);
+
+var ulArquibancadaEl = document.getElementById("listaArquibancada");
+var ulPistaEl = document.getElementById("listaPista");
+var ulCamaroteEl = document.getElementById("listaCamarote");
+
+var montaNome = (objPessoa) => {
+  return `${objPessoa.nome} ${objPessoa.sobrenome}`;
+};
+
+var marcarOpenBar = (convidado) => {
+  return convidado.openBar ? "🍺" : "🧉";
+};
+
+listaArquibancada.forEach((convidado) => {
+  ulArquibancadaEl.innerHTML += `<li>${montaNome(convidado)} ${marcarOpenBar(convidado)}</li>`; //prettier-ignore
+});
+
+listaCamarote.forEach((convidado) => {
+  ulCamaroteEl.innerHTML += `<li>${montaNome(convidado)} ${marcarOpenBar(convidado)}</li>`; //prettier-ignore
+});
+
+listaPista.forEach((convidado) => {
+  ulPistaEl.innerHTML += `<li>${montaNome(convidado)} ${marcarOpenBar(convidado)}</li>`; // prettier-ignore
+});
