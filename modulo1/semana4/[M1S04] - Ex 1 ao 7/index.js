@@ -1,0 +1,1 @@
+var select = document.querySelect('#operacao')
