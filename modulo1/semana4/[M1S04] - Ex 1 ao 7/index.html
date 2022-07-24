@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevInBank</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>DevInBank</h1>
+    </header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon"
-        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj09-kuCb0AJ3KLNhMnnuVXAjKNuP0SzC0uA&usqp=CAU">
-    <title>Meu extrato</title>
-</head>
-
-<body>
     <main>
-        <div class="listaClientes">
-        <select name="clients" id="clientes">
-</div>
-        </select>
-        <input type="Valor">
-        <select name="option" id="operacao">
-            <option value="depositar">Depositar</option>
-            <option value="sacar">Sacar</option>
-        </select>
-        <button>Confirmar</button>
+      <form id="form">
+        <div class="formGroup">
+          <label>Conta:</label>
+          <select id="conta" class="field"></select>
+        </div>
 
+        <div class="formGroup">
+          <label>Valor:</label>
+          <input id="valor" class="field" type="number" />
+        </div>
+
+        <div class="formGroup">
+          <label>Operação:</label>
+          <select id="operacao" class="field">
+            <option value="0">(Selecione)</option>
+            <option value="1">Sacar</option>
+            <option value="2">Depositar</option>
+          </select>
+        </div>
+
+        <button id="confirmar" class="button-confirm">Confirmar</button>
+      </form>
+
+      <strong id="mensagem"></strong>
     </main>
-</body>
-<script src="index.js"></script>
+  </body>
 
+  <script src="./index.js"></script>
 </html>
